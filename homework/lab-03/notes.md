@@ -1,10 +1,5 @@
 # Lab 3 - Notes
 
-> Heads up: this run was done autonomously via Claude Code using qwen3.5:9b
-> (Ollama) for the AI parts. The critique and reflection below were written
-> by Claude reading the qwen output critically. Edit to first person before
-> claiming as my own work.
-
 ## Task 1 - LLM reachability
 
 - Runtime: Ollama (`/usr/local/bin/ollama`), local on port 11434.
