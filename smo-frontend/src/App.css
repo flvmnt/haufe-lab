@@ -1,5 +1,15 @@
 .app {
-    padding: 0 48px 80px;
+    flex: 1;
+    padding: 0 48px;
+}
+
+.footer {
+    border-top: 1px solid var(--rule);
+    padding: 18px 48px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
 }
 
 .navbar {
@@ -37,7 +47,14 @@
 
 .navbar-actions {
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+.navbar-handle {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink);
 }
 
 .btn {
@@ -81,12 +98,23 @@
     display: grid;
     grid-template-columns: 96px 1fr;
     gap: 28px;
-    padding: 22px 0;
+    padding: 22px 16px;
     border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    transition: box-shadow 0.15s, background 0.15s;
 }
 
 .question-item:last-child {
     border-bottom: none;
+}
+
+.question-item:hover {
+    box-shadow: inset 3px 0 0 var(--accent);
+    background: rgba(107, 68, 35, 0.04);
+}
+
+.question-item:hover .question-title {
+    color: var(--accent);
 }
 
 .question-meta {
@@ -138,6 +166,7 @@
 
 .question-title {
     margin: 0 0 10px;
+    transition: color 0.15s;
 }
 
 .question-tags {
@@ -172,6 +201,165 @@
 .question-author .handle {
     font-family: var(--mono);
     color: var(--ink);
+}
+
+.question-detail {
+    padding: 32px 0 16px;
+}
+
+.back-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin-bottom: 28px;
+    border-bottom: none;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    border-bottom: none;
+}
+
+.question-header {
+    margin-bottom: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.question-detail-title {
+    font-size: 26px;
+    margin: 0 0 10px;
+    line-height: 125%;
+    letter-spacing: -0.015em;
+}
+
+.question-detail-meta {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+
+.question-block,
+.answer {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    padding: 24px 20px 28px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.answer-accepted {
+    box-shadow: inset 3px 0 0 var(--accent);
+    background: rgba(107, 68, 35, 0.04);
+}
+
+.vote-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.1;
+}
+
+.vote-rail strong {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.block-content {
+    min-width: 0;
+}
+
+.block-body {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 165%;
+    color: var(--ink);
+    max-width: 68ch;
+    margin: 0 0 18px;
+    white-space: pre-wrap;
+}
+
+.answers-section {
+    margin-top: 40px;
+}
+
+.answers-heading {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.answer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.answer-list .answer:last-child {
+    border-bottom: none;
+}
+
+.ai-chip {
+    display: inline-block;
+    font-family: var(--mono);
+    background: var(--code-bg);
+    color: var(--accent);
+    border: 1px solid var(--paper-edge);
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-size: 10px;
+    text-transform: lowercase;
+    line-height: 1;
+    vertical-align: 1px;
+    margin-left: 8px;
+}
+
+.answer-author {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 10px;
+}
+
+.comment-list {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 12px 0 0;
+    border-top: 1px dashed var(--rule);
+}
+
+.comment {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    line-height: 150%;
+    color: var(--ink-soft);
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--rule);
+    max-width: 68ch;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.not-found {
+    padding: 96px 0;
+    text-align: center;
+    color: var(--ink-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .auth {
