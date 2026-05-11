@@ -1,0 +1,266 @@
+.app {
+    padding: 0 48px 80px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 48px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: none;
+    letter-spacing: -0.01em;
+}
+
+.wordmark::before {
+    content: '> ';
+    color: var(--accent);
+}
+
+.wordmark:hover {
+    color: var(--accent);
+    border-bottom: none;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    line-height: 1.2;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+}
+
+.btn-ghost:hover {
+    border-color: var(--ink);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--paper);
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+}
+
+.question-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.question-item {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.question-item:last-child {
+    border-bottom: none;
+}
+
+.question-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-soft);
+}
+
+.question-meta .votes,
+.question-meta .answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    line-height: 1.1;
+}
+
+.question-meta .votes strong,
+.question-meta .answers strong {
+    font-family: var(--mono);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.solved {
+    display: inline-block;
+    font-family: var(--mono);
+    background: var(--accent);
+    color: var(--paper);
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    vertical-align: 1px;
+    margin-left: 10px;
+}
+
+.question-body {
+    min-width: 0;
+}
+
+.question-title {
+    margin: 0 0 10px;
+}
+
+.question-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--code-bg);
+    border: 1px solid var(--paper-edge);
+    border-radius: 2px;
+    padding: 2px 6px;
+    line-height: 1.4;
+}
+
+.tag::before {
+    content: '#';
+    opacity: 0.6;
+}
+
+.question-author {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+
+.question-author .handle {
+    font-family: var(--mono);
+    color: var(--ink);
+}
+
+.auth {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--paper);
+}
+
+.auth::before,
+.auth::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--paper-edge);
+    pointer-events: none;
+}
+
+.auth::before {
+    left: max(0px, calc(50% - 440px));
+}
+
+.auth::after {
+    right: max(0px, calc(50% - 440px));
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.auth-logo {
+    align-self: flex-start;
+    font-size: 14px;
+}
+
+.auth-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.auth-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+}
+
+.auth-label input {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 10px 12px;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.auth-label input:focus {
+    border-color: var(--accent);
+}
+
+.auth-submit {
+    margin-top: 6px;
+}
+
+.auth-foot {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 4px;
+}

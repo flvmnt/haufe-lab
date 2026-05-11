@@ -1,0 +1,85 @@
+:root {
+  --paper: #f7f4ec;
+  --paper-edge: #e8e2d2;
+  --ink: #16161a;
+  --ink-soft: #4a4a4a;
+  --rule: #d8d3c4;
+  --accent: #6b4423;
+  --code-bg: #efeadd;
+  --shadow: rgba(22, 22, 26, 0.06) 0 1px 0 0;
+
+  --serif: 'Iowan Old Style', 'Charter', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Consolas, monospace;
+
+  font: 16px/150% var(--sans);
+  color: var(--ink-soft);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 880px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border-inline: 1px solid var(--paper-edge);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 115%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 17px;
+  line-height: 130%;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 14px;
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 2px;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
