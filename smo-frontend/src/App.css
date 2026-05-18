@@ -362,6 +362,84 @@
     gap: 16px;
 }
 
+.ask-question {
+    padding-bottom: 48px;
+}
+
+.ask-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.ask-label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+}
+
+.ask-label input,
+.ask-label textarea {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 10px 12px;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.ask-label textarea {
+    resize: vertical;
+    min-height: 180px;
+    line-height: 1.55;
+    font-family: var(--sans);
+    font-size: 15px;
+}
+
+.ask-label input:focus,
+.ask-label textarea:focus {
+    border-color: var(--accent);
+}
+
+.ask-tag-list {
+    margin-top: 8px;
+}
+
+.tag-remove {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 6px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.tag-remove:hover {
+    color: var(--ink);
+}
+
+.field-error {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: #b34a3a;
+    margin-top: 2px;
+}
+
+.ask-submit {
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
 .auth {
     position: fixed;
     inset: 0;

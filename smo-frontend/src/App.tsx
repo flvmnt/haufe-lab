@@ -1,6 +1,8 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
+import AskQuestion from './pages/AskQuestion';
 import Home from './pages/Home';
 import QuestionDetail from './pages/QuestionDetail';
 import SignIn from './pages/SignIn';
@@ -25,6 +27,14 @@ function App() {
             <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/q/:id" element={<QuestionDetail />} />
+                <Route
+                    path="/questions/new"
+                    element={
+                        <ProtectedRoute>
+                            <AskQuestion />
+                        </ProtectedRoute>
+                    }
+                />
             </Route>
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
